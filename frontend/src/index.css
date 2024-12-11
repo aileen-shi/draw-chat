@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+  --white: #e8e8e8;
+  --gray-blue: #c5cee6;
+  --gray-purple-light: #71707a;
+  --gray-purple: #494754;
+  --purple: #7b62e3;
+  --purple2: #554e96;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Figtree', sans-serif;
+}
+body {
+  background-color: var(--gray-blue);
+}
+h1, h2, h3, h4, h5, h6, p, label {
+  color: #e8e8e8;
+}
+.home__container {
+  width: 50%;
+  height: 60vh;
+  margin: 10rem auto;
+  background-color: var(--gray-purple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.home__container > * {
+  margin-bottom: 1rem;
+}
+.home__header {
+  margin-bottom: 5rem;
+  font-size: 3em;
+}
+.home__btn {
+  margin-top: 3rem;
+  width: 5rem;
+  padding: .5rem;
+  cursor: pointer;
+  font-size: 1.5em;
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+.home__btn:hover {
+  background-color: var(--purple2);
+}
+.username__input {
+  background-color: var(--gray-purple-light);
+  color: var(--white);
+  width: 50%;
+  padding: .5rem;
+}
+.chat {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.chat__sidebar {
+  background-color: var(--gray-purple);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+  flex: 0.2;
+  padding: 0.5rem;
+}
+.chat__main {
+  height: 100%;
+  flex: 0.8;
+}
+.chat__canvas {
+  background-color: white;
+  
+}
+.chat__canvas canvas {
+  height: 800px;
+  width: 800px;
+}
