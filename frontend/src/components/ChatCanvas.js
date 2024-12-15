@@ -6,6 +6,7 @@ const ChatCanvas = ({ socket }) => {
     const [isDrawing, setIsDrawing] = useState(false);
     const [lineWidth, setLineWidth] = useState(5);
     const [lineColor, setLineColor] = useState("black");
+    const [message, setMessage] = useState("");
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -54,6 +55,11 @@ const ChatCanvas = ({ socket }) => {
         ctxRef.current.stroke();
     }
 
+    const sendMessage = (e) => {
+        e.preventDefault();
+
+    }
+
     return (
         <div className="chat__canvas">
             <canvas 
@@ -62,6 +68,7 @@ const ChatCanvas = ({ socket }) => {
                 onMouseMove={draw}
                 ref={canvasRef}
             />
+            <button onClick={sendMessage}></button>
         </div>
     );
 };
